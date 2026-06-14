@@ -1,0 +1,79 @@
+{
+    "With rain, with you": {
+        "addPaused": null,
+        "affectedFeeds": [
+            "https://api.animes.garden/feed.xml?subject=509062&fansub=ANi"
+        ],
+        "assignedCategory": "",
+        "enabled": false,
+        "episodeFilter": "",
+        "ignoreDays": 0,
+        "lastMatch": "05 Jul 2025 16:31:00 +0000",
+        "mustContain": "",
+        "mustNotContain": "",
+        "previouslyMatchedEpisodes": [
+        ],
+        "priority": 0,
+        "savePath": "/home/IRendy/Videos/Anime",
+        "smartFilter": false,
+        "torrentContentLayout": null,
+        "torrentParams": {
+            "category": "",
+            "download_limit": -1,
+            "download_path": "",
+            "inactive_seeding_time_limit": -2,
+            "operating_mode": "AutoManaged",
+            "ratio_limit": -2,
+            "save_path": "/home/IRendy/Videos/Anime",
+            "seeding_time_limit": -2,
+            "share_limit_action": "Default",
+            "skip_checking": false,
+            "ssl_certificate": "",
+            "ssl_dh_params": "",
+            "ssl_private_key": "",
+            "tags": [
+            ],
+            "upload_limit": -1,
+            "use_auto_tmm": false
+        },
+        "useRegex": false
+    },
+    "无限扭蛋": {
+        "addPaused": null,
+        "affectedFeeds": [
+            "https://api.animes.garden/feed.xml?fansub=ANi"
+        ],
+        "assignedCategory": "",
+        "enabled": false,
+        "episodeFilter": "",
+        "ignoreDays": 0,
+        "lastMatch": "",
+        "mustContain": "9999",
+        "mustNotContain": "",
+        "previouslyMatchedEpisodes": [
+        ],
+        "priority": 0,
+        "savePath": "",
+        "smartFilter": false,
+        "torrentContentLayout": null,
+        "torrentParams": {
+            "category": "",
+            "download_limit": -1,
+            "download_path": "",
+            "inactive_seeding_time_limit": -2,
+            "operating_mode": "AutoManaged",
+            "ratio_limit": -2,
+            "save_path": "",
+            "seeding_time_limit": -2,
+            "share_limit_action": "Default",
+            "skip_checking": false,
+            "ssl_certificate": "",
+            "ssl_dh_params": "",
+            "ssl_private_key": "",
+            "tags": [
+            ],
+            "upload_limit": -1
+        },
+        "useRegex": false
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "ANi 最新动画资源": {
+        "uid": "{14e485ad-f1b0-414a-aebc-94215ad60f95}",
+        "url": "https://api.animes.garden/feed.xml?fansub=ANi"
+    },
+    "GMTeam 最新动画资源": {
+        "uid": "{e796662b-eef9-4db4-a1ca-9a1dad978eca}",
+        "url": "https://api.animes.garden/feed.xml?fansub=GMTeam"
+    },
+    "LoliHouse 最新动画资源": {
+        "uid": "{f6d73087-7100-4107-acf1-d87fd064524e}",
+        "url": "https://api.animes.garden/feed.xml?fansub=LoliHouse"
+    },
+    "动漫花园镜像站": {
+        "uid": "{d0363d9e-9a9f-46d7-8ca6-a91c09e1b670}",
+        "url": "https://api.animes.garden/feed.xml"
+    },
+    "最新合集资源": {
+        "uid": "{3d630dab-939f-4eaa-be34-846614a6775d}",
+        "url": "https://api.animes.garden/feed.xml?type=%E5%90%88%E9%9B%86"
+    },
+    "最新漫画资源": {
+        "uid": "{96942b70-40e6-41d7-90db-1f50ac33da51}",
+        "url": "https://api.animes.garden/feed.xml?type=%E6%BC%AB%E7%94%BB"
+    },
+    "桜都字幕组 最新动画资源": {
+        "uid": "{3aa2cf57-1eab-42c3-b6f0-c5cae725dc01}",
+        "url": "https://api.animes.garden/feed.xml?fansub=%E6%A1%9C%E9%83%BD%E5%AD%97%E5%B9%95%E7%BB%84"
+    }
+}

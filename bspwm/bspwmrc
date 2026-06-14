@@ -1,0 +1,86 @@
+#!/bin/sh
+
+# monitor
+#xrandr --output HDMI-0 --mode 2560x1440 --rate 144 --right-of DP-4
+#xrandr --output DP-4 --mode 1920x1080 --rate 160 --primary
+
+export XDG_CURRENT_DESKTOP="bspwm"
+systemctl --user import-environment DISPLAY
+# xorg dpms config
+xset dpms 0 0 0
+
+pgrep -x sxhkd >/dev/null || sxhkd &
+
+#bspc wm -O DP-2 DP-4
+#bspc monitor DP-2 -d Editor Terminal Terminal2
+#bspc monitor DP-4 -d Browser 5 6 7 8
+#bspc monitor -d Editor Terminal Terminal2 Browser 5 6 7 8
+screen_nums=$(xrandr --query | grep -c " connected")
+if [ "$screen_nums" -eq 2 ]; then
+  bspc monitor DP-4 -d I II III IV V
+  bspc monitor HDMI-0 -d VI VII VIII IX
+  #elif [ "$screen_nums" -eq 1 ]; then
+  #bspc monitor -d I II III IV V VI VII VIII IX
+else
+  bspc monitor -d I II III IV V VI VII VIII IX
+fi
+
+#bspc monitor DP-4 -d Editor Terminal Terminal2 4 5
+#bspc monitor HDMI-0 -d 6 7 8
+
+bspc config border_width 2
+bspc config window_gap 5
+
+bspc config split_ratio 0.53
+bspc config single_monocle true
+
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config automatic_scheme longest_side
+bspc config initial_polarity second_child
+bspc config removal_adjustment true
+
+bspc config focus_follows_pointer true
+bspc config pointer_follows_focus false
+bspc config pointer_follows_monitor true
+bspc config pointer_motion_interval 7
+bspc config pointer_modifier mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+#bspc rule -a firefox desktop='^4'
+bspc rule -a flameshot state=floating focus=off
+bspc rule -a pavucontrol state=floating
+bspc rule -a discord desktop='^6'
+bspc rule -a Zotero state=floating
+
+# polybar
+"$HOME"/.config/polybar/launch_polybar.sh
+
+wmname LG3D
+
+# Launch picom
+exec picom --config "${HOME}"/.config/bspwm/config/picom/picom.conf &
+
+exec fcitx5 & # 输入法
+# exec dunst -conf $HOME/.config/dunst/dunstrc & # 通知程序
+exec dunst -conf "$HOME"/.config/bspwm/config/dunst/dunstrc & # 通知程序
+exec browserpass &                                            # 启动浏览器 pass
+exec nm-applet &
+exec udiskie --tray &
+exec flameshot &
+
+# /home/lizqwer/scripts/dwm/background.sh &
+"$HOME"/.config/bspwm/scripts/AutoStaticWall &
+
+xrdb "${HOME}"/.config/bspwm/config/xresources
+
+#"$HOME"/.config/polybar/scripts/toggle-touchpad.sh &
+
+# Low battery notify
+"${HOME}"/.config/bspwm/scripts/NotifyLowBattery

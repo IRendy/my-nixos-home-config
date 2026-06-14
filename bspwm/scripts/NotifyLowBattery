@@ -1,0 +1,39 @@
+#!/run/current-system/sw/bin/bash
+
+BATTERY_PATH="/sys/class/power_supply/BAT0/capacity"
+NOTIFY_FLAG="$HOME/.cache/battery_low_notified"
+
+rm -r "$NOTIFY_FLAG"
+# 创建缓存目录（如果不存在）
+mkdir -p "$(dirname "$NOTIFY_FLAG")"
+
+while true; do
+    # 读取电量
+    if [ ! -f "$BATTERY_PATH" ]; then
+        sleep 60
+        continue
+    fi
+
+    CAP=$(cat "$BATTERY_PATH" 2>/dev/null)
+    if ! [[ "$CAP" =~ ^[0-9]+$ ]]; then
+        sleep 60
+        continue
+    fi
+
+    if [ "$CAP" -lt 15 ]; then
+        # 如果还没发过通知，就发一次并标记
+        if [ ! -f "$NOTIFY_FLAG" ]; then
+            notify-send \
+                --urgency=critical \
+                --expire-time=10000 \
+                "⚠️ 电量低！" \
+                "当前电量：${CAP}%，请及时充电！"
+            touch "$NOTIFY_FLAG"  # 创建标记文件
+        fi
+    elif [ "$CAP" -ge 20 ]; then
+        # 电量恢复到 20% 以上，清除标记（允许下次再提醒）
+        rm -f "$NOTIFY_FLAG"
+    fi
+
+    sleep 120  # 每2分钟检查一次
+done
