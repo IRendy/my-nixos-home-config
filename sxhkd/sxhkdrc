@@ -145,10 +145,10 @@ XF86AudioMute
 
 # Backlight Controls
 XF86MonBrightnessUp
-  backlight_control +1
+  brightnessctl set 5%+
 
 XF86MonBrightnessDown
-  backlight_control -1
+  brightnessctl set 5%-
 
 XF86Calculator
   bc
