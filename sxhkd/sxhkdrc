@@ -147,6 +147,9 @@ XF86AudioMute
 XF86AudioPlay
   playerctl play-pause
 
+XF86AudioStop
+  playerctl stop
+
 XF86AudioNext
   playerctl next
 
