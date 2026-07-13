@@ -133,6 +133,13 @@ super + ctrl + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+# Poweroff
+super + h
+  poweroff
+
+super + space + h
+  reboot
+
 # Volume Controls
 XF86AudioRaiseVolume
   pactl set-sink-volume @DEFAULT_SINK@ +1%
@@ -164,4 +171,4 @@ XF86MonBrightnessDown
   brightnessctl set 5%-
 
 XF86Calculator
-  bc
+  kitty --hold bc -l -q
