@@ -1,0 +1,11 @@
+theme = "ayu_evolve"
+
+[editor]
+line-number = "relative"
+mouse = false
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25
+max-indent-retain = 0
+wrap-indicator = ""
