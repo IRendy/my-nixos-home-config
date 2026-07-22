@@ -134,10 +134,10 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Poweroff
-super + h
+XF86Launch1
   poweroff
 
-super + space + h
+super + alt + h
   reboot
 
 # Volume Controls
