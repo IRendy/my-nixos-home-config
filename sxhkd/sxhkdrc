@@ -134,11 +134,19 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Poweroff
-XF86Launch1
+super + XF86Launch1
   poweroff
 
-super + alt + h
+super + alt + XF86Launch1
   reboot
+
+# ScreenCapture
+Print
+  flameshot screen -c
+
+ctrl + Print
+  flameshot screen -p "/home/irendy/Pictures/Screenshot/"
+ 
 
 # Volume Controls
 XF86AudioRaiseVolume
