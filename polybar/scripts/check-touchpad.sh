@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/run/current-system/sw/bin/bash
 
 # 你的触控板名称
-touchpad_name="ELAN06FA:00 04F3:327E Touchpad"
+touchpad_name="SynPS/2 Synaptics TouchPad"
 
 # 检查触控板状态
 status=$(xinput list-props "$touchpad_name" | grep "Device Enabled" | awk '{print $4}')
