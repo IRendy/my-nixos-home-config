@@ -1,5 +1,9 @@
 # goldendict-ng dict
 
+添加词典: 编辑>词典>词典来源>文件>添加>选择 $HOME/.config/goldendict/dict 路径
+
+Add dictionaries > Sources > Files > Add > Select Path $HOME/.config/goldendict/dict
+
 ## github.com/shanyouli/stardict
 
 - stardict-21cen-2.4.2
