@@ -183,3 +183,6 @@ XF86MonBrightnessDown
 
 XF86Calculator
   kitty --hold bc -l -q
+
+XF86Launch1
+  kitty

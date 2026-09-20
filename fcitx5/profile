@@ -18,6 +18,24 @@ Name=shuangpin
 # Layout
 Layout=
 
+[Groups/0/Items/2]
+# Name
+Name=mozc
+# Layout
+Layout=
+
+[Groups/0/Items/3]
+# Name
+Name=keyboard-fr
+# Layout
+Layout=
+
+[Groups/0/Items/4]
+# Name
+Name=keyboard-ru
+# Layout
+Layout=
+
 [GroupOrder]
 0=Default
 

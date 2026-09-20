@@ -10,3 +10,8 @@ auto-format = true
 formatter = { command = "gofmt" }
 indent = { tab-width = 4, unit = " " }
 language-servers = [ "gopls" ]
+
+[[language]]
+name = "json"
+formatter = { command = "jq", args = ["."] }
+auto-format = true
