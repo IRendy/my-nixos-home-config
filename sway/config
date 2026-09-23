@@ -8,6 +8,7 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+set $alt Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -26,6 +27,7 @@ output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_19
 # output * bg $HOME/Pictures/background/official/gbswmmbrmezwcyte.png fill
 exec fcitx5 &
 exec waybar &
+exec flameshot &
 default_border pixel 1
 default_floating_border pixel 1
 # exec $HOME/.config/sway/staticWallpaper.sh
@@ -255,6 +257,8 @@ bindsym $mod+r mode "resize"
 #         urgent_workspace #ce4045 #ce4045 #ffffff
 #     }
 # }
+bindsym $mod+XF86Launch1 exec poweroff
+bindsym $mod+$alt+XF86Launch1 exec reboot
 client.focused          #4c7899 #285577 #ffffff #2e9ef4 #4c7899
 client.unfocused        #333333 #222222 #888888 #292d2e #333333
 set $menu rofi -show combi -combi-modes window,drun,run,filebrowser -modes combi
