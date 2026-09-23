@@ -21,8 +21,11 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
+super + alt + r
+	bspc wm -r
+
+super + alt + q
+	bspc quit && $HOME/.config/bspwm/scripts/Kill
 
 # close and kill
 # super + {_,shift + }w

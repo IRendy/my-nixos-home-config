@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+for i in $(ps -eo pid,args --no-headers | grep 'd*\sbash /home/irendy/.config/bspwm/scripts' | awk '{print $1}'); do
+	kill $i
+done
