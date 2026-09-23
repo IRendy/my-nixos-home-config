@@ -1,4 +1,4 @@
-#!/run/current-system/sw/bin/bash
+#!/usr/bin/env bash
 
 BATTERY_PATH="/sys/class/power_supply/BAT0/capacity"
 NOTIFY_FLAG="$HOME/.cache/battery_low_notified"
