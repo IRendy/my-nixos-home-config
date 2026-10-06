@@ -9,13 +9,15 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 set $alt Mod1
+set $ctrl Control
+set $shift Shift
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term kitty
 # Your preferred application launcher
 # set $menu wmenu-run
 
@@ -100,6 +102,12 @@ default_floating_border pixel 1
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Restart waybar
+    bindsym $mod+$alt+r exec pkill waybar || true && waybar &
+
+    # Exit waybar
+    bindsym $mod+$alt+q exec pkill waybar
 #
 # Moving around:
 #
@@ -232,8 +240,10 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 1%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 1%+
 
-    # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    # Special key to take a screenshot with flameshot
+    bindsym Print exec flameshot screen -c
+    bindsym $ctrl+Print flameshot screen -p "/home/irendy/Pictures/Screenshot/"
+
 
 #
 # Status Bar:
