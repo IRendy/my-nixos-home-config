@@ -24,12 +24,12 @@ set $term kitty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-# exec /home/irendy/.config/sway/staticWallpaper.sh
+# output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+exec /home/irendy/.config/sway/staticWallpaper.sh &
 # output * bg $HOME/Pictures/background/official/gbswmmbrmezwcyte.png fill
 exec fcitx5 &
 exec waybar &
-exec flameshot &
+# exec flameshot &
 default_border pixel 1
 default_floating_border pixel 1
 # exec $HOME/.config/sway/staticWallpaper.sh
@@ -241,8 +241,11 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 1%+
 
     # Special key to take a screenshot with flameshot
-    bindsym Print exec flameshot screen -c
-    bindsym $ctrl+Print flameshot screen -p "/home/irendy/Pictures/Screenshot/"
+    # bindsym Print exec flameshot screen -c
+    # bindsym $ctrl+Print flameshot screen -p "/home/irendy/Pictures/Screenshot/"
+    bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/Pictures/Screenshots/screenshot-$(date +'%Y%m%d-%H%M%S').png && notify-send "Screenshot saved"
+    bindsym Print exec grim ~/Pictures/Screenshots/screenshot-$(date +'%Y%m%d-%H%M%S').png && notify-send "Screenshot saved"
+    # bindsym $mod+Shift+e exec grim -g "$(slurp)" - | swappy -f -
 
 
 #
