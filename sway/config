@@ -26,7 +26,7 @@ set $term kitty
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
 # output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 exec /home/irendy/.config/sway/staticWallpaper.sh &
-# output * bg $HOME/Pictures/background/official/gbswmmbrmezwcyte.png fill
+# output * bg $HOME/Pictures/background/official/g5qwcm3bhfsteylf.webp fill
 exec fcitx5 &
 exec waybar &
 # exec flameshot &
