@@ -1,8 +1,7 @@
 [[language]]
 name = "python"
+formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
 auto-format = true
-language-servers = [ "ruff" ]
-indent = { tab-width = 4, unit = " " }
 
 [[language]]
 name = "go"
@@ -13,5 +12,54 @@ language-servers = [ "gopls" ]
 
 [[language]]
 name = "json"
-formatter = { command = "jq", args = ["."] }
+formatter = { command = 'prettier', args = ["--parser", "json"] }
 auto-format = true
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+auto-format = true
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+auto-format = true
+
+[[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+auto-format = true
+
+[[language]]
+name = "yaml"
+formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+auto-format = true
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["format", "-"] }
+auto-format = true
+
+[[language]]
+name = "xml"
+auto-format = true
+formatter = { command = "xmllint", args = ["--format", "-"] }
+
+[[language]]
+auto-format = true
+name = "nix"
+formatter = { command = "nixfmt" }
+
+[[language]]
+name = "lua"
+formatter = { command = "stylua", args = [ "-" ] }
