@@ -8,7 +8,7 @@ name = "go"
 auto-format = true
 formatter = { command = "gofmt" }
 indent = { tab-width = 4, unit = " " }
-language-servers = [ "gopls" ]
+language-servers = ["gopls"]
 
 [[language]]
 name = "json"
@@ -22,12 +22,12 @@ auto-format = true
 
 [[language]]
 name = "javascript"
-formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "typescript"
-formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
@@ -62,4 +62,4 @@ formatter = { command = "nixfmt" }
 
 [[language]]
 name = "lua"
-formatter = { command = "stylua", args = [ "-" ] }
+formatter = { command = "stylua", args = ["-"] }
