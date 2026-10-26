@@ -138,54 +138,51 @@ super + {Left,Down,Up,Right}
 
 # Poweroff
 super + XF86Launch1
-  poweroff
+	poweroff
 
 super + alt + XF86Launch1
-  reboot
+	reboot
 
 # ScreenCapture
 Print
-  flameshot screen -c
+	flameshot screen -c
 
 ctrl + Print
-  flameshot screen -p "/home/irendy/Pictures/Screenshot/"
+	flameshot screen -p "/home/irendy/Pictures/Screenshot/"
  
 
 # Volume Controls
 XF86AudioRaiseVolume
-  pactl set-sink-volume @DEFAULT_SINK@ +1%
+	pactl set-sink-volume @DEFAULT_SINK@ +1%
 
 XF86AudioLowerVolume
-  pactl set-sink-volume @DEFAULT_SINK@ -1%
+	pactl set-sink-volume @DEFAULT_SINK@ -1%
 
 XF86AudioMute
-  pactl set-sink-mute @DEFAULT_SINK@ toggle
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 XF86AudioMicMute
-  pactl set-source-mute @DEFAULT_SOURCE@ toggle
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Media Player Controls
 XF86AudioPlay
-  playerctl play-pause
+	playerctl play-pause
 
 XF86AudioStop
-  playerctl stop
+	playerctl stop
 
 XF86AudioNext
-  playerctl next
+	playerctl next
 
 XF86AudioPrev
-  playerctl previous
+	playerctl previous
 
 # Backlight Controls
 XF86MonBrightnessUp
-  brightnessctl set 5%+
+	brightnessctl set 5%+
 
 XF86MonBrightnessDown
-  brightnessctl set 5%-
+	brightnessctl set 5%-
 
 XF86Calculator
-  kitty --hold bc -l -q
-
-XF86Launch1
-  kitty
+	kitty --hold bc -l -q
