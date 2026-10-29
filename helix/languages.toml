@@ -63,3 +63,10 @@ formatter = { command = "nixfmt" }
 [[language]]
 name = "lua"
 formatter = { command = "stylua", args = ["-"] }
+auto-format = true
+
+[[language]]
+name = "rust"
+formatter = { command = "rustfmt" }
+lsp-servers = ["rust-analyzer"]
+auto-format = true
