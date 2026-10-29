@@ -68,5 +68,5 @@ auto-format = true
 [[language]]
 name = "rust"
 formatter = { command = "rustfmt" }
-lsp-servers = ["rust-analyzer"]
+language-servers = ["rust-analyzer"]
 auto-format = true
